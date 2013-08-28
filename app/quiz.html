@@ -25,32 +25,31 @@
 
         <div class="container">
             <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li class="active"><a href="#">My Quizzes</a></li>
+                    <li><a href="#">New Quiz</a></li>
+                    <li><a href="#">Account</a></li>
+                </ul>
                 <h3 class="text-muted">Quizzr</h3>
             </div>
 
-            <div class="row main">
-                <div class="login col-md-6">
-                    <form role="form">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                      </div>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Remember me
-                        </label>
-                      </div>
-                      <button type="submit" class="btn btn-default">Sign in</button>
-                        </form>
+            <div class="main quiz">
+                <header>
+                    <h1>Heroes</h1>
+                </header>
+                <div class="row">
+                    <div class="col-md-7">
+                        <p><span>This quiz tests your knowledge about heroes! </span><span>To be more specific greek heroes.</span></p>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1">
+                        <ol>
+                            <li><a href="/quiz/heroes/1">Who is..</a></li>
+                            <li><a href="/quiz/heroes/1">Mother of Zeus</a></li>
+                            <li><a href="/quiz/heroes/1">Zeus horse</a></li>
+                        </ol>
+                    </div>
                 </div>
-                <div class="register col-md-6">
-                <p class="lead">If you don't have an account you can register!</p>
-                <button class="btn">Register</button>
-                </div>
+
             </div>
 
             <div class="footer">

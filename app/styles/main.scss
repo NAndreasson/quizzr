@@ -15,8 +15,8 @@ body {
     padding-bottom: 20px;
 }
 
-.auth {
-    padding: 15px;
+.main {
+    padding: 15px 0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -86,7 +86,7 @@ body {
     }
     /* Space out the masthead */
     .header {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
