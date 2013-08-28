@@ -33,35 +33,28 @@
                 <h3 class="text-muted">Quizzr</h3>
             </div>
 
-            <div class="main quiz">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#summary">Summary</a></li>
-                <li><a href="#answers">Review answers</a></li>
-              </ul>
+            <div class="main new-quiz">
+              <h1>New quiz</h1>
 
-              <div class="tab-content">
-                <div class="tab-pane active" id="summary">.
-                  <div class="row">
-                    <div class="col-md-7">
-                      <h1>Heroes</h1>
-                        <p><span>This quiz tests your knowledge about heroes! </span><span>To be more specific greek heroes.</span></p>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1">
-                      <h6>Questions</h6>
-                      <ol>
-                        <li><a href="/quiz/heroes/1">Who is..</a></li>
-                        <li><a href="/quiz/heroes/1">Mother of Zeus</a></li>
-                        <li><a href="/quiz/heroes/1">Zeus horse</a></li>
-                      </ol>
-                    </div>
+              <div class="row">
+                <form role="form" class="col-md-6">
+
+                   <div class="form-group">
+                     <label for="quizName">Name</label>
+                     <input type="email" class="form-control" id="quizName" placeholder="Enter name">
+                   </div>
+
+                   <div class="form-group">
+                     <label for="quizDesc">Description</label>
+                    <textarea class="form-control" id="quizDesc" rows="3"></textarea>
+                   </div>
+
+                   <div class="form-group">
+                      <button type="submit" class="btn btn-success">Create</button>
+                      <button class="btn btn-danger">Cancel</button>
                   </div>
-                </div>
-                <div class="tab-pane" id="answers">
-                  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, incidunt, eos recusandae provident id mollitia sit eveniet est architecto assumenda asperiores quos sequi consectetur accusantium quo? Neque adipisci voluptates odit!</div>
-                  <div>Molestias, impedit, ipsum, distinctio dicta id inventore amet quaerat sit molestiae quae aliquam dolores voluptatibus possimus ab necessitatibus laudantium ipsa architecto ea sed voluptate magni quod laborum magnam suscipit provident.</div>
-                </div>
+               </form>
               </div>
-
             </div>
 
             <div class="footer">
