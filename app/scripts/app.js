@@ -1,6 +1,17 @@
-/*global define */
-define([], function () {
-    'use strict';
+'use strict';
 
-    return '\'Allo \'Allo!';
-});
+angular.module('quizzrApp', [])
+  .config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
+      })
+      .when('/newquiz', {
+        templateUrl: 'views/newquiz.html',
+        controller: 'NewQuizCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  });
