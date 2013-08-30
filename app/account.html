@@ -26,9 +26,16 @@
         <div class="container">
             <div class="header">
                 <ul class="nav nav-pills pull-right">
-                    <li><a href="#">My Quizzes</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="#">New Quiz</a></li>
-                    <li class="active"><a href="#">Account</a></li>
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="account.html">Profile</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a href="">Log out</a></li>
+                      </ul>
+                    </li>
                 </ul>
                 <h3 class="text-muted">Quizzr</h3>
             </div>

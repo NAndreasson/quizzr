@@ -6,6 +6,7 @@ require.config({
         bootstrapButton: '../bower_components/sass-bootstrap/js/button',
         bootstrapCarousel: '../bower_components/sass-bootstrap/js/carousel',
         bootstrapCollapse: '../bower_components/sass-bootstrap/js/collapse',
+        bootstrapDropDown: '../bower_components/sass-bootstrap/js/dropdown',
         bootstrapPopover: '../bower_components/sass-bootstrap/js/popover',
         bootstrapScrollspy: '../bower_components/sass-bootstrap/js/scrollspy',
         bootstrapTab: '../bower_components/sass-bootstrap/js/tab',
@@ -28,6 +29,9 @@ require.config({
         bootstrapCollapse: {
             deps: ['jquery']
         },
+        bootstrapDropDown: {
+            deps: ['jquery']
+        },
         bootstrapPopover: {
             deps: ['jquery']
         },
@@ -46,7 +50,7 @@ require.config({
     }
 });
 
-require(['app', 'jquery'], function (app, $) {
+require(['app', 'jquery', 'bootstrapDropDown'], function (app, $) {
     'use strict';
     // use app here
     console.log(app);
