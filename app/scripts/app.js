@@ -11,6 +11,10 @@ angular.module('quizzrApp', [])
         templateUrl: 'views/newquiz.html',
         controller: 'NewQuizCtrl'
       })
+      .when('/account', {
+        templateUrl: 'views/account.html',
+        controller: 'AccountCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
