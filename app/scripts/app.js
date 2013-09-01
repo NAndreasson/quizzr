@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('quizzrApp', [])
+angular.module('quizzrApp', [ 'quizzrServices' ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -14,6 +14,10 @@ angular.module('quizzrApp', [])
       .when('/account', {
         templateUrl: 'views/account.html',
         controller: 'AccountCtrl'
+      })
+      .when('/quiz/:id', {
+        templateUrl: 'views/quiz.html',
+        controller: 'QuizCtrl'
       })
       .otherwise({
         redirectTo: '/'

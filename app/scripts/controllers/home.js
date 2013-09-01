@@ -1,9 +1,6 @@
 'use strict';
 
 angular.module('quizzrApp')
-  .controller('HomeCtrl', function ($scope) {
-    $scope.quizzes = [
-      { name: 'Heroes' },
-      { name: 'Myths' }
-    ];
+  .controller('HomeCtrl', function ($scope, Quiz) {
+    $scope.quizzes = Quiz.query();
   });
