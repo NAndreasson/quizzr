@@ -1,0 +1,16 @@
+{
+    "id": "heroes",
+    "title": "Heroes",
+    "desc": "This quiz tests your knowledge about heroes! To be more specific greek heroes.",
+    "questions": [
+        {
+            "title": "Who is.."
+        },
+        {
+            "title": "Mother of Zeus"
+        },
+        {
+            "title": "Zeus Horse"
+        }
+    ]
+}

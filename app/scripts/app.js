@@ -15,7 +15,7 @@ angular.module('quizzrApp', [ 'quizzrServices' ])
         templateUrl: 'views/account.html',
         controller: 'AccountCtrl'
       })
-      .when('/quiz/:id', {
+      .when('/quiz/:quizId', {
         templateUrl: 'views/quiz.html',
         controller: 'QuizCtrl'
       })

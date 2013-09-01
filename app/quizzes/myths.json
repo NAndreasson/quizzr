@@ -1,0 +1,13 @@
+{
+    "id": "myths",
+    "title": "Myths",
+    "desc": "What do you know about urban legends? Let's find out!",
+    "questions": [
+        {
+            "title": "Loch Ness"
+        },
+        {
+            "title": "Boogie man"
+        }
+    ]
+}

@@ -8,15 +8,15 @@
     <div class="tab-pane active" id="summary">.
       <div class="row">
         <div class="col-md-7">
-          <h1>Heroes</h1>
-          <p><span>This quiz tests your knowledge about heroes! </span><span>To be more specific greek heroes.</span></p>
+          <h1>{{quiz.title}}</h1>
+          <p>{{quiz.desc}}</p>
       </div>
       <div class="col-md-4 col-md-offset-1">
           <h6>Questions</h6>
           <ol>
-            <li><a href="/quiz/heroes/1">Who is..</a></li>
-            <li><a href="/quiz/heroes/1">Mother of Zeus</a></li>
-            <li><a href="/quiz/heroes/1">Zeus horse</a></li>
+            <li ng-repeat="question in quiz.questions">
+              <a href="/quiz/heroes/1">{{question.title}}</a>
+            </li>
         </ol>
     </div>
 </div>

@@ -1,10 +1,12 @@
 [
     {
-        "name": "Heroes",
-        "id": "heroes"
+        "title": "Heroes",
+        "id": "heroes",
+        "desc": "This quiz tests your knowledge about heroes! To be more specific greek heroes."
     },
     {
-        "name": "Myths",
-        "id": "myths"
+        "title": "Myths",
+        "id": "myths",
+        "desc": "What do you know about urban legends? Let's find out!"
     }
 ]

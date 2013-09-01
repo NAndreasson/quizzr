@@ -1,18 +1,27 @@
-<div class="quizzes">
-    <ul class="list-unstyled">
-        <li ng-repeat="quiz in quizzes" class="quiz">
-          <header>
-            <a href="#/quiz/{{quiz.id}}">
-              <h2>{{quiz.name}}</h2>
-            </a>
-          </header>
-          <section>
-            <ul class="list-inline">
-              <li>12 answers</li>
-              <li>33 questions</li>
-            </ul>
-          </section>
-        </li>
-    </ul>
-</div>
+    <ul class="list-unstyled quizzes">
+      <li ng-repeat="quiz in quizzes" class="quiz">
+        <header>
+          <h2>
+            <a href="#/quiz/{{quiz.id}}">{{quiz.title}}</a>
+          </h2>
+        </header>
 
+        <section>
+          <p class="desc">{{quiz.desc}}</p>
+        </section>
+
+        <footer>
+          <ul class="list-inline quiz-stats">
+            <li class="quiz-stat">
+              <span class="label label-success">Open</span>
+            </li>
+            <li class="quiz-stat">
+              <span class="label label-default">33 questions</span>
+            </li>
+            <li class="quiz-stat">
+              <span class="label label-info">12 answers</span>
+              </li>
+          </ul>
+        </footer>
+      </li>
+    </ul>
