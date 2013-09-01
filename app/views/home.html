@@ -2,7 +2,9 @@
     <ul class="list-unstyled">
         <li ng-repeat="quiz in quizzes" class="quiz">
           <header>
-            <h2>{{quiz.name}}</h2>
+            <a href="#/quiz/{{quiz.id}}">
+              <h2>{{quiz.name}}</h2>
+            </a>
           </header>
           <section>
             <ul class="list-inline">
