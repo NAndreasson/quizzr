@@ -26,9 +26,9 @@
     <![endif]-->
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-            <li class="active"><a href="#/">Home</a></li>
-            <li><a href="#/newquiz">New Quiz</a></li>
+        <ul class="nav nav-pills pull-right" ng-controller="NavCtrl">
+            <li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
+            <li ng-class="{ active: isActive('/newquiz')}"><a href="#/newquiz">New Quiz</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -65,8 +65,9 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
 
-        <script src="scripts/services/quiz.js"></script>
         <script src="scripts/app.js"></script>
+        <script src="scripts/services/quiz.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <script src="scripts/controllers/home.js"></script>
         <script src="scripts/controllers/new-quiz.js"></script>
         <script src="scripts/controllers/account.js"></script>
