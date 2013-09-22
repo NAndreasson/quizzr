@@ -13,5 +13,6 @@
 
 Route::get('/', function()
 {
-	return View::make('home');
+	$quizzes = Quiz::all();
+	return View::make('home')->with('quizzes', $quizzes);
 });
