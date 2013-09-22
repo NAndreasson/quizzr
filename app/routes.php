@@ -11,8 +11,11 @@
 |
 */
 
-Route::get('/', function()
-{
+Route::get('/', function() {
 	$quizzes = Quiz::all();
 	return View::make('home')->with('quizzes', $quizzes);
+});
+
+Route::get('/account', function() {
+	return View::make('account');
 });
