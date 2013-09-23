@@ -11,12 +11,12 @@
   <div class="container">
     <div class="header">
       <ul class="nav nav-pills pull-right" ng-controller="NavCtrl">
-          <li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
-          <li ng-class="{ active: isActive('/newquiz')}"><a href="#/newquiz">New Quiz</a></li>
+        <li>{{ HTML::link('/', 'Home') }}</li>
+        <li ng-class="{ active: isActive('/newquiz')}"><a href="#/newquiz">New Quiz</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="/account">Profile</a></li>
+              <li>{{ HTML::link('/account', 'Profile') }}</li>
               <li role="presentation" class="divider"></li>
               <li><a href="">Log out</a></li>
             </ul>
@@ -34,5 +34,7 @@
     </div>
 
   </div>
+  {{ HTML::script('/js/jquery-2.0.3.js') }}
+  {{ HTML::script('/js/bootstrap.js') }}
 </body>
 </html>
