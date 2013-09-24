@@ -7,7 +7,7 @@
     <li class="quiz">
       <header>
         <h2>
-          <a href="#/quiz/{{ $quiz->id }}">{{ $quiz->title }}</a>
+          <a href="/quiz/{{ $quiz->id }}">{{ $quiz->title }}</a>
         </h2>
       </header>
 

@@ -1,8 +1,5 @@
 <?php
 
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableInterface;
-
 class Quiz extends Eloquent {
 
 	/**
@@ -12,4 +9,7 @@ class Quiz extends Eloquent {
 	 */
 	protected $table = 'quizzes';
 
+	public function questions() {
+		return $this->hasMany('Question');
+	}
 }
