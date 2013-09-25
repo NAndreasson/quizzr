@@ -35,7 +35,7 @@
           <h6>Questions</h6>
           <ol>
           	@foreach ($quiz->questions as $question)
-            	<li>{{ $question->title }}</li>
+              <li><a href="/quiz/{{ $quiz->id }}/questions/{{ $question->id }}">{{ $question->title }}</a></li>
             @endforeach
           </ol>
        </div>

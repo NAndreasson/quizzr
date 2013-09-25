@@ -16,10 +16,9 @@ Route::get('/', function() {
 	return View::make('home')->with('quizzes', $quizzes);
 });
 
-Route::get('/quiz/{id}', function($id) {
-	$quiz = Quiz::find($id);
-	return View::make('quiz.summary')->with('quiz', $quiz);
-});
+Route::get('/quiz/{id}', 'QuizController@showSummary');
+
+Route::get('/quiz/{id}/questions/{questionId}', 'QuizController@showQuestion');
 
 Route::get('/account', function() {
 	return View::make('account');
