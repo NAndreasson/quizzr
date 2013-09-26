@@ -22,7 +22,7 @@ class QuizTableSeeder extends Seeder {
 	public function run() {
 		DB::table('quizzes')->delete();
 
-		Quiz::create( array( 'title' => 'Heroes', 'desc' => 'Time to prove what you know about heroes!' ) );
+		Quiz::create( array( 'title' => 'Heroes', 'desc' => 'Time to prove what you know about heroes!', 'status' => 'unpublished') );
 	}
 
 }

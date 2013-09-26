@@ -16,6 +16,7 @@
 <div class="tab-content">
     <div class="tab-pane active" id="summary">.
 
+    @if ($quiz->status === 'unpublished')
       <div class="row">
         <div class="col-md-12">
           <div class="alert alert-info">
@@ -23,6 +24,7 @@
           </div>
         </div>
       </div>
+    @endif
 
       <div class="row">
 
