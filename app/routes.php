@@ -20,7 +20,9 @@ Route::get('/quiz/{id}', 'QuizController@showSummary');
 
 Route::get('/quiz/{id}/questions/{questionId}', 'QuizController@showQuestion');
 
-Route::get('/newquiz', 'QuizController@newQuiz');
+Route::post('/quiz', 'QuizController@createQuiz');
+
+Route::get('/newquiz', 'QuizController@showNewQuizForm');
 
 Route::get('/account', function() {
 	return View::make('account');

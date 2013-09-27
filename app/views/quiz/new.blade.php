@@ -5,23 +5,23 @@
     <h1>New quiz</h1>
 
     <div class="row">
-      <form role="form" class="col-md-6">
+      {{ Form::open(array('url' => 'quiz', 'method' => 'POST', 'class' => 'col-md-6')) }}
 
          <div class="form-group">
-           <label for="quizName">Name</label>
-           <input type="email" class="form-control" id="quizName" placeholder="Enter name">
+          {{ Form::label('title', 'Name') }}
+          {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Enter name')) }}
          </div>
 
          <div class="form-group">
-           <label for="quizDesc">Description</label>
-          <textarea class="form-control" id="quizDesc" rows="3"></textarea>
+          {{ Form::label('desc', 'Description') }}
+          {{ Form::textarea('desc', null, array('class' => 'form-control', 'rows' => '3')) }}
          </div>
 
          <div class="form-group">
-            <button type="submit" class="btn btn-success">Create</button>
-            <button class="btn btn-danger">Cancel</button>
+          {{ Form::submit('Create', array('class' => 'btn btn-success')) }}
+          {{ Form::button('Cancel', array('class' => 'btn btn-danger')) }}
         </div>
-     </form>
+    {{ Form::close() }}
     </div>
   </div>
 @stop
