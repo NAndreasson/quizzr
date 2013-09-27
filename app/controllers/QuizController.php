@@ -16,4 +16,9 @@ class QuizController extends BaseController {
 			return View::make('quiz.question')->with('question', $question);
 	}
 
+	public function newQuiz()
+	{
+		return View::make('quiz.new');
+	}
+
 }

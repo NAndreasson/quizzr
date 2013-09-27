@@ -12,15 +12,15 @@
     <div class="header">
       <ul class="nav nav-pills pull-right" ng-controller="NavCtrl">
         <li>{{ HTML::link('/', 'Home') }}</li>
-        <li ng-class="{ active: isActive('/newquiz')}"><a href="#/newquiz">New Quiz</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li>{{ HTML::link('/account', 'Profile') }}</li>
-              <li role="presentation" class="divider"></li>
-              <li><a href="">Log out</a></li>
-            </ul>
-          </li>
+        <li>{{ HTML::link('/newquiz', 'New Quiz') }}</li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>{{ HTML::link('/account', 'Profile') }}</li>
+            <li role="presentation" class="divider"></li>
+            <li><a href="">Log out</a></li>
+          </ul>
+        </li>
       </ul>
       <h3 class="text-muted">Quizzr</h3>
     </div>
