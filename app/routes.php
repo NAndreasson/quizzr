@@ -20,6 +20,8 @@ Route::get('/quiz/{id}', 'QuizController@showSummary');
 
 Route::get('/quiz/{id}/questions/{questionId}', 'QuizController@showQuestion');
 
+Route::post('/quiz/{id}/addquestion', 'QuizController@createNewQuestion');
+
 Route::post('/quiz', 'QuizController@createQuiz');
 
 Route::get('/newquiz', 'QuizController@showNewQuizForm');

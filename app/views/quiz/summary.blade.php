@@ -8,8 +8,9 @@
   </ol>
 
   <ul class="nav nav-tabs">
-    <li class="active pull-right"><a href="#summary">Summary</a></li>
+    <li class="active pull-right"><a href="#summary" data-toggle="tab">Summary</a></li>
     <li class="pull-right"><a href="#questions">Questions</a></li>
+    <li class="pull-right"><a href="#newquestion" data-toggle="tab">New question</a></li>
     <li class="pull-right"><a href="#answers">Review answers</a></li>
   </ul>
 
@@ -44,6 +45,36 @@
 
       </div>
 
+      <div class="row" style="margin-top: 30px">
+        <div class="col-md-7">
+          <button class="btn">Publish</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tab-pane" id="newquestion">
+      <h1>New questiion</h1>
+
+      <div class="row">
+        {{ Form::open(array('url' => 'quiz', 'method' => 'POST', 'class' => 'col-md-6')) }}
+
+         <div class="form-group">
+          {{ Form::label('title', 'Name') }}
+          {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Enter name')) }}
+         </div>
+
+         <div class="form-group">
+          {{ Form::label('desc', 'Description') }}
+          {{ Form::textarea('desc', null, array('class' => 'form-control', 'rows' => '3')) }}
+         </div>
+
+         <div class="form-group">
+          {{ Form::submit('Create', array('class' => 'btn btn-success')) }}
+          {{ Form::button('Cancel', array('class' => 'btn btn-danger')) }}
+        </div>
+        {{ Form::close() }}
+      </div>
     </div>
 
     <div class="tab-pane" id="answers">

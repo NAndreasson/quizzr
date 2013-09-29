@@ -49,4 +49,9 @@ class QuizController extends BaseController {
 		return Redirect::to('/');
 	}
 
+	public function showNewQuestionForm()
+	{
+		return View::make('quiz.newquestion');
+	}
+
 }
