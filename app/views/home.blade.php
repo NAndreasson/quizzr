@@ -21,7 +21,7 @@
             <span class="label label-success">Open</span>
           </li>
           <li class="quiz-stat">
-            <span class="label label-default">33 questions</span>
+            <span class="label label-default">{{ count($quiz->questions) }} questions</span>
           </li>
           <li class="quiz-stat">
             <span class="label label-info">12 answers</span>
