@@ -54,4 +54,34 @@ class QuizController extends BaseController {
 		return View::make('quiz.newquestion');
 	}
 
+	public function createNewQuestion()
+	{
+		$quizId = Input::get('quizId');
+
+		$newQuestion = array(
+			'title' => Input::get('title'),
+			'question' => Input::get('question')
+		);
+
+		$rules = array(
+			'title' => 'required|min:3|max:50',
+			'question' => 'required'
+		);
+
+		$validator = Validator::make($newQuestion, $rules);
+
+		if ( $validator->fails() ) {
+			return Redirect::to('/quiz/' . $quizId);
+		}
+
+		// create a new Quiz model
+		$question = new Question();
+		$question->title = $newQuestion['title'];
+		$question->question = $newQuestion['question'];
+		$question->quiz_id = $quizId;
+		$question->save();
+
+		// redirect to the quiz page
+		return Redirect::to('/');
+	}
 }

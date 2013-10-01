@@ -57,16 +57,16 @@
       <h1>New questiion</h1>
 
       <div class="row">
-        {{ Form::open(array('url' => 'quiz', 'method' => 'POST', 'class' => 'col-md-6')) }}
-
+        {{ Form::open(array('url' => 'addquestion', 'method' => 'POST', 'class' => 'col-md-6')) }}
+          {{ Form::hidden('quizId', $quiz->id )}}
          <div class="form-group">
           {{ Form::label('title', 'Name') }}
           {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Enter name')) }}
          </div>
 
          <div class="form-group">
-          {{ Form::label('desc', 'Description') }}
-          {{ Form::textarea('desc', null, array('class' => 'form-control', 'rows' => '3')) }}
+          {{ Form::label('question', 'Question') }}
+          {{ Form::textarea('question', null, array('class' => 'form-control', 'rows' => '3')) }}
          </div>
 
          <div class="form-group">
