@@ -69,6 +69,20 @@
           {{ Form::textarea('question', null, array('class' => 'form-control', 'rows' => '3')) }}
          </div>
 
+        <div class="form-group">
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              <input type="text" placeholder="Alternative 1">
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              <input type="text" placeholder="Alternative 2">
+            </label>
+          </div>
+        </div>
          <div class="form-group">
           {{ Form::submit('Create', array('class' => 'btn btn-success')) }}
           {{ Form::button('Cancel', array('class' => 'btn btn-danger')) }}
