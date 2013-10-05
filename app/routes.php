@@ -12,19 +12,23 @@
 */
 
 Route::get('/', function() {
-	$quizzes = Quiz::all();
-	return View::make('home')->with('quizzes', $quizzes);
+	// $quizzes = Quiz::all();
+	// return View::make('home')->with('quizzes', $quizzes);
+	return Redirect::to('/quiz');
 });
 
-Route::get('/quiz/{id}', 'QuizController@showSummary');
+Route::resource('quiz', 'QuizController');
 
-Route::get('/quiz/{id}/questions/{questionId}', 'QuizController@showQuestion');
+Route::resource('quiz.questions', 'QuizQuestionsController');
+// Route::get('/quiz/{id}', 'QuizController@showSummary');
 
-Route::post('/addquestion', 'QuizController@createNewQuestion');
+// Route::get('/quiz/{id}/questions/{questionId}', 'QuizController@showQuestion');
 
-Route::post('/quiz', 'QuizController@createQuiz');
+// Route::post('/addquestion', 'QuizController@createNewQuestion');
 
-Route::get('/newquiz', 'QuizController@showNewQuizForm');
+// Route::post('/quiz', 'QuizController@createQuiz');
+
+// Route::get('/newquiz', 'QuizController@showNewQuizForm');
 
 Route::get('/account', function() {
 	return View::make('account');

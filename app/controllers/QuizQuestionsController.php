@@ -1,16 +1,15 @@
 <?php
 
-class QuizController extends \BaseController {
+class QuizQuestionsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($quizId)
 	{
-		$quizzes = Quiz::all();
-		return View::make('home')->with('quizzes', $quizzes);
+
 	}
 
 	/**
@@ -20,7 +19,7 @@ class QuizController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('quiz.new');
+		//
 	}
 
 	/**
@@ -28,29 +27,30 @@ class QuizController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store($quizId)
 	{
-		$newQuiz = array(
+		$newQuestion = array(
 			'title' => Input::get('title'),
-			'desc' => Input::get('desc')
+			'question' => Input::get('question')
 		);
 
 		$rules = array(
 			'title' => 'required|min:3|max:50',
-			'desc' => 'required'
+			'question' => 'required'
 		);
 
-		$validator = Validator::make($newQuiz, $rules);
+		$validator = Validator::make($newQuestion, $rules);
 
 		if ( $validator->fails() ) {
-			return Redirect::to('/newquiz');
+			return Redirect::to('/quiz/' . $quizId);
 		}
 
 		// create a new Quiz model
-		$quiz = new Quiz();
-		$quiz->title = $newQuiz['title'];
-		$quiz->desc = $newQuiz['desc'];
-		$quiz->save();
+		$question = new Question();
+		$question->title = $newQuestion['title'];
+		$question->question = $newQuestion['question'];
+		$question->quiz_id = $quizId;
+		$question->save();
 
 		// redirect to the quiz page
 		return Redirect::to('/');
@@ -62,11 +62,11 @@ class QuizController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($quizId, $questionId)
 	{
-		$quiz = Quiz::find($id);
+		$question = Question::find( $questionId );
 
-		return View::make('quiz.summary')->with('quiz', $quiz);
+		return View::make('quiz.question')->with('question', $question);
 	}
 
 	/**

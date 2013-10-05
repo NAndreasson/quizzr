@@ -12,7 +12,7 @@
     <div class="header">
       <ul class="nav nav-pills pull-right" ng-controller="NavCtrl">
         <li>{{ HTML::link('/', 'Home') }}</li>
-        <li>{{ HTML::link('/newquiz', 'New Quiz') }}</li>
+        <li>{{ HTML::link('/quiz/create', 'New Quiz') }}</li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
           <ul class="dropdown-menu">

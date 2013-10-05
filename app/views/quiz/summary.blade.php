@@ -57,8 +57,7 @@
       <h1>New questiion</h1>
 
       <div class="row">
-        {{ Form::open(array('url' => 'addquestion', 'method' => 'POST', 'class' => 'col-md-6')) }}
-          {{ Form::hidden('quizId', $quiz->id )}}
+        {{ Form::open(array('url' => '/quiz/'.$quiz->id.'/questions', 'method' => 'POST', 'class' => 'col-md-6')) }}
          <div class="form-group">
           {{ Form::label('title', 'Name') }}
           {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Enter name')) }}
