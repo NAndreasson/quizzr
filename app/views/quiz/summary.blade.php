@@ -54,7 +54,7 @@
     </div>
 
     <div class="tab-pane" id="newquestion">
-      <h1>New questiion</h1>
+      <h1>New question</h1>
 
       <div class="row">
         {{ Form::open(array('url' => '/quiz/'.$quiz->id.'/questions', 'method' => 'POST', 'class' => 'col-md-6')) }}
@@ -72,13 +72,13 @@
           <div class="radio">
             <label>
               <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-              <input type="text" placeholder="Alternative 1">
+              <input type="text" class="form-control" placeholder="Alternative 1">
             </label>
           </div>
           <div class="radio">
             <label>
               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-              <input type="text" placeholder="Alternative 2">
+              <input type="text" class="form-control" placeholder="Alternative 2">
             </label>
           </div>
         </div>
