@@ -17,9 +17,11 @@ class QuizQuestionsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create($quizId)
 	{
-		//
+		$quiz = Quiz::find($quizId);
+
+		return View::make('quiz.newquestion')->with('quiz', $quiz);
 	}
 
 	/**
