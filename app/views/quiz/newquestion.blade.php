@@ -31,16 +31,13 @@
 
         <div class="form-group">
           <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-              <input type="text" class="form-control" placeholder="Alternative 1">
-            </label>
+            {{ Form::radio('radio1') }}
+            {{ Form::text('alternative1', null, array('class' => 'form-control', 'placeholder' => 'Alternative')) }}
           </div>
+
           <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-              <input type="text" class="form-control" placeholder="Alternative 2">
-            </label>
+            {{ Form::radio('radio2') }}
+            {{ Form::text('alternative2', null, array('class' => 'form-control', 'placeholder' => 'Alternative')) }}
           </div>
         </div>
          <div class="form-group">

@@ -54,6 +54,14 @@ class QuizQuestionsController extends \BaseController {
 		$question->quiz_id = $quizId;
 		$question->save();
 
+		// get all the answer alternatives
+
+			// create a model for each and every one of them
+
+			// save
+		$answerAlternative = new AnswerAlternative();
+		$answerAlternative
+
 		// redirect to the quiz page
 		return Redirect::to('/');
 	}

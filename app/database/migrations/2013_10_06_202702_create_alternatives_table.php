@@ -12,9 +12,12 @@ class CreateAlternativesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('alternatives', function(Blueprint $table)
+		Schema::create('answerAlternatives', function($table)
 		{
 			$table->increments('id');
+			$table->string('text');
+			$table->boolean('correct');
+			$table->integer('question_id');
 			$table->timestamps();
 		});
 	}
@@ -26,7 +29,7 @@ class CreateAlternativesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('alternatives');
+		Schema::drop('answerAlternatives');
 	}
 
 }
