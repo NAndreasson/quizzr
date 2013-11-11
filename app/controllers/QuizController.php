@@ -2,6 +2,12 @@
 
 class QuizController extends \BaseController {
 
+	protected $quiz;
+
+	public function __construct(Quiz $quiz) {
+		$this->quiz = $quiz;
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -9,7 +15,8 @@ class QuizController extends \BaseController {
 	 */
 	public function index()
 	{
-		$quizzes = Quiz::all();
+		$quizzes = $this->quiz->all();
+
 		return View::make('home')->with('quizzes', $quizzes);
 	}
 
@@ -64,7 +71,7 @@ class QuizController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$quiz = Quiz::find($id);
+		$quiz = $this->quiz->find($id);
 
 		return View::make('quiz.summary')->with('quiz', $quiz);
 	}
