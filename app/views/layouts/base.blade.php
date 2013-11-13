@@ -10,7 +10,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <ul class="nav nav-pills pull-right" ng-controller="NavCtrl">
+      <ul class="nav nav-pills pull-right">
         <li>{{ HTML::link('/', 'Home') }}</li>
         <li>{{ HTML::link('/quiz/create', 'New Quiz') }}</li>
         <li class="dropdown">

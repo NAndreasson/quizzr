@@ -13,8 +13,8 @@
 
 Route::get('/', function() {
 	// $quizzes = Quiz::all();
-	// return View::make('home')->with('quizzes', $quizzes);
-	return Redirect::to('/quiz');
+	return View::make('login');
+	// return Redirect::to('/quiz');
 });
 
 Route::resource('quiz', 'QuizController');

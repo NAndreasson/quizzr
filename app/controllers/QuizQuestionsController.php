@@ -41,9 +41,13 @@ class QuizQuestionsController extends \BaseController {
 			'question' => 'required'
 		);
 
-		$validator = Validator::make($newQuestion, $rules);
+		$quizValidator = Validator::make($newQuestion, $rules);
 
-		if ( $validator->fails() ) {
+		// create to alternatives
+
+		// rules
+
+		if ( $quizValidator->fails() ) {
 			return Redirect::to('/quiz/' . $quizId);
 		}
 
@@ -60,7 +64,6 @@ class QuizQuestionsController extends \BaseController {
 
 			// save
 		$answerAlternative = new AnswerAlternative();
-		$answerAlternative
 
 		// redirect to the quiz page
 		return Redirect::to('/');
