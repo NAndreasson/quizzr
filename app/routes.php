@@ -17,9 +17,24 @@ Route::get('/', function() {
 	// return Redirect::to('/quiz');
 });
 
-Route::resource('quiz', 'QuizController');
+Route::post('/login', 'UserController@postSignin');
 
-Route::resource('quiz.questions', 'QuizQuestionsController');
+Route::group(array( 'before' => 'auth' ), function() {
+
+	Route::resource('quiz', 'QuizController');
+
+	Route::resource('quiz.questions', 'QuizQuestionsController');
+
+	Route::get('/account', function() {
+		return View::make('account');
+	});
+
+});
+
+Route::filter('auth', function() {
+	if ( Auth::guest() ) return Redirect::guest('/');
+});
+
 // Route::get('/quiz/{id}', 'QuizController@showSummary');
 
 // Route::get('/quiz/{id}/questions/{questionId}', 'QuizController@showQuestion');
@@ -29,7 +44,3 @@ Route::resource('quiz.questions', 'QuizQuestionsController');
 // Route::post('/quiz', 'QuizController@createQuiz');
 
 // Route::get('/newquiz', 'QuizController@showNewQuizForm');
-
-Route::get('/account', function() {
-	return View::make('account');
-});
