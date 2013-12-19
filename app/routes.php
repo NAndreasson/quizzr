@@ -17,6 +17,12 @@ Route::get('/', function() {
 	// return Redirect::to('/quiz');
 });
 
+Route::get('/register', function() {
+	return View::make('register');
+});
+
+Route::post('/register', 'UserController@postCreate');
+
 Route::post('/login', 'UserController@postSignin');
 
 Route::group(array( 'before' => 'auth' ), function() {

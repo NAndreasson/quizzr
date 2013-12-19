@@ -18,7 +18,7 @@
       <div class="row">
 
         <div class="col-md-6">
-          <form role="form" action="/login" method="post">
+          <form role="form" action="/register" method="post">
             <div class="form-group">
               <label for="email">Email address</label>
               <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
@@ -26,23 +26,14 @@
             <div class="form-group">
               <label for="password">Password</label>
               <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+            <div class="form-group">
+              <label for="password-confirmation">Password confirmation</label>
+              <input type="password" class="form-control" name="password_confirmation" id="password-confirmation" placeholder="Password">
             </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Keep me logged in
-              </label>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default">Register</button>
           </form>
         </div>
-
-        <div class="col-md-6">
-          <p>If you don't have an account you can register <a href="/register">here</a></p>
-        </div>
       </div>
-
-
-
     </div>
 
     <div class="footer">

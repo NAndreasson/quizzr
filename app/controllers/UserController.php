@@ -4,7 +4,7 @@ class UserController extends BaseController {
 
 	public function postCreate()
 	{
-		$validator = Validator::make(Input::all(), User::$rules);
+		$validator = Validator::make( Input::all(), User::$rules );
 
    		if ( $validator->passes() ) {
 			$user = new User();
@@ -14,6 +14,8 @@ class UserController extends BaseController {
    		} else {
       		// validation has failed, display error messages
    		}
+
+   		return Redirect::to('/');
 	}
 
 	public function postSignin()
@@ -23,7 +25,7 @@ class UserController extends BaseController {
 		if ( Auth::attempt( $userCredentials ) ) {
 			return Redirect::intended('/quiz');
 		}
-		return Redirect::to('/')->with('message', 'Your username/password combination was incorrect')->withInput();
+		return Redirect::to('/quiz')->with('message', 'Your username/password combination was incorrect')->withInput();
 	}
 
 }
