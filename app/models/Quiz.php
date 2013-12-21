@@ -9,7 +9,13 @@ class Quiz extends Eloquent {
 	 */
 	protected $table = 'quizzes';
 
-	public function questions() {
+	public function user()
+	{
+		return $this->belongsTo('User');
+	}
+
+	public function questions()
+	{
 		return $this->hasMany('Question');
 	}
 }

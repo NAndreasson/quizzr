@@ -12,8 +12,11 @@
 */
 
 Route::get('/', function() {
+	if ( Auth::guest() ) return View::make('login');
+
+	return Redirect::to('/quiz');
+
 	// $quizzes = Quiz::all();
-	return View::make('login');
 	// return Redirect::to('/quiz');
 });
 

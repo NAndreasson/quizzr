@@ -15,7 +15,7 @@ class QuizController extends \BaseController {
 	 */
 	public function index()
 	{
-		$quizzes = $this->quiz->all();
+		$quizzes = Auth::User()->quizzes;
 
 		return View::make('home')->with('quizzes', $quizzes);
 	}
@@ -57,10 +57,11 @@ class QuizController extends \BaseController {
 		$quiz = new Quiz();
 		$quiz->title = $newQuiz['title'];
 		$quiz->desc = $newQuiz['desc'];
+		$quiz->user_id = Auth::user()->id;
 		$quiz->save();
 
 		// redirect to the quiz page
-		return Redirect::to('/');
+		return Redirect::to('/quiz');
 	}
 
 	/**
