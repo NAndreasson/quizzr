@@ -8,12 +8,11 @@
         <ul class="list-unstyled account-details">
           <li>
             <h3>Email</h3>
-            <p>andreasson.n@gmail.com</p>
+            <p>{{ Auth::User()->email }}</p>
             <p><a href="#">Change e-mail</a></p>
           </li>
           <li>
             <h3>Password</h3>
-            <p>********</p>
             <p><a href="#">Change password</a></p>
           </li>
         </ul>

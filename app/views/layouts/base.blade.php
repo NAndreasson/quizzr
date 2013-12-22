@@ -18,7 +18,7 @@
           <ul class="dropdown-menu">
             <li>{{ HTML::link('/account', 'Profile') }}</li>
             <li role="presentation" class="divider"></li>
-            <li><a href="">Log out</a></li>
+            <li>{{ HTML::link('/logout', 'Log out')}}</li>
           </ul>
         </li>
       </ul>

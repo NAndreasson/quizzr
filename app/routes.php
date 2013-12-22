@@ -15,9 +15,6 @@ Route::get('/', function() {
 	if ( Auth::guest() ) return View::make('login');
 
 	return Redirect::to('/quiz');
-
-	// $quizzes = Quiz::all();
-	// return Redirect::to('/quiz');
 });
 
 Route::get('/register', function() {
@@ -39,6 +36,13 @@ Route::group(array( 'before' => 'auth' ), function() {
 	});
 
 });
+
+Route::get('/logout', function() {
+	Auth::logout();
+
+	return Redirect::to('/');
+});
+
 
 Route::filter('auth', function() {
 	if ( Auth::guest() ) return Redirect::guest('/');
