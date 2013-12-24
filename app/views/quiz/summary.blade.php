@@ -3,7 +3,7 @@
 @section('content')
 <div class="quiz">
   <ol class="breadcrumb">
-    <li><a href="#">Home</a></li>
+    <li><a href="/">Home</a></li>
     <li class="active">{{ $quiz->title}}</li>
   </ol>
 
