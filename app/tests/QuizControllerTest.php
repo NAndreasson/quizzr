@@ -4,7 +4,8 @@ class QuizControllerTest extends TestCase {
 
 	public function __construct()
 	{
-		$this->mock = Mockery::mock('Eloquent', 'Quiz');
+		$this->userMock = Mockery::mock('Eloquent', 'User');
+
 	}
 
 	public function tearDown()
@@ -14,12 +15,9 @@ class QuizControllerTest extends TestCase {
 
 	public function testIndex()
 	{
-		$this->mock
-		->shouldReceive('all')
-		->once()
-		->andReturn(array());
+		$this->userMock->quizzes = array();
 
-		$this->app->instance('Quiz', $this->mock);
+		Auth::shouldReceive('User')->once()->andReturn($this->userMock);
 
 		$this->call('GET', 'quiz');
 
