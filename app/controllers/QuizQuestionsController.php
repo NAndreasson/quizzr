@@ -9,7 +9,9 @@ class QuizQuestionsController extends \BaseController {
 	 */
 	public function index($quizId)
 	{
+		$quiz = Quiz::find( $quizId );
 
+		return View::make('quiz.questions')->with( 'quiz', $quiz );
 	}
 
 	/**
