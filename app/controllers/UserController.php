@@ -2,6 +2,12 @@
 
 class UserController extends BaseController {
 
+	public function __construct(User $user)
+	{
+		$this->user = $user;
+	}
+
+
 	public function postCreate()
 	{
 		$validator = Validator::make( Input::all(), User::$rules );
